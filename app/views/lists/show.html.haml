@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @list.title
+%p
+  %strong Description:
+  = @list.description
+  
+= render @list.items
+= render 'items/form'
+
+= link_to 'Edit', edit_list_path(@list)
+= link_to 'Back', lists_path
