@@ -2,21 +2,25 @@ class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
 
   def index
-    @lists = List.all
+    if user_signed_in?
+      @lists = current_user.lists
+     else 
+      redirect_to new_user_session_path
+    end
   end
 
   def show
   end
 
   def new
-    @list = List.new
+    @list = current_user.lists.build
   end
 
   def edit
   end
 
   def create
-    @list = List.new(list_params)
+    @list = current_user.lists.build(list_params)
 
     respond_to do |format|
       if @list.save
