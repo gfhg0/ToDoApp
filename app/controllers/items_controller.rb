@@ -9,8 +9,8 @@ class ItemsController < ApplicationController
 
 
 	def destroy
-    	@item.destroy
-    	redirect_to @list
+		@item.destroy
+		redirect_to @list
   	end
 
 	private

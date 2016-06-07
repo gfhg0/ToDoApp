@@ -15,3 +15,61 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@font-face {
+    font-family: 'Stellar';
+    font-weight: normal;
+  	font-style: normal;
+  	src: font-url('stellar-light-webfont.eot');
+    src: font-url(font-path('stellar-light-webfont.eot') + "?#iefix") format('embedded-opentype'),
+         font-url(font-path('stellar-light-webfont.woff')) format('woff'), 
+         font-url(font-path('stellar-light-webfont.ttf'))  format('truetype'),
+         font-url(font-path('stellar-light-webfont.svg') + "#MyFont") format('svg');
+}
+
+body{
+	font-family: 'Stellar';
+	background: #329932;
+}
+.navbar{
+	background: #323232;
+	color: #f2f6f9;
+	border-color: #f2f6f9;
+}
+.navbar-default {
+  border-color: transparent;
+}
+.link{
+	color: #dbdada !important;
+}
+.link:hover{
+	color: #b7b5b5 !important;
+	text-decoration: none;
+}
+.link-main{
+	color: #7fbf7f;
+}
+.link-main:hover{
+	color: #7fbf7f;
+	text-decoration: none;
+}
+.panel{
+	border: transparent;
+}
+.panel-heading{
+	text-transform: uppercase;
+	background-color: #323232 !important;
+	text-decoration: none;
+	border-color: transparent !important;
+}
+.panel-body{
+	background-color: #4ca64c !important;
+	font-size: 18px;
+}
+.fa.fa-trash, .fa.fa-pencil{
+	text-decoration: none;
+	color: #dbdada;
+	float: right;
+	text-align: center;
+	padding-left: 8px;
+}
