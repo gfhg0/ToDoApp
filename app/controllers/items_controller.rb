@@ -13,12 +13,6 @@ class ItemsController < ApplicationController
     	redirect_to @list
   	end
 
-  	def complete
-  		@item.update_attribute(:completed_at, Time.now)
-		redirect_to @list, notice: "Completed"
-  	end
-
-
 	private
 
 	def set_list
