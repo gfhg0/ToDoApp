@@ -73,3 +73,31 @@ body{
 	text-align: center;
 	padding-left: 8px;
 }
+.fa.fa-trash:hover, .fa.fa-pencil:hover{
+	color: #b7b5b5;
+}
+.fa.fa-tasks{
+	color: #dbdada;
+	float: left;
+}
+.title{
+	color: #dbdada;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+}
+.task{
+	text-align: center;
+	border: 1px solid #99cc99;
+	background-color: #99cc99;
+	border-radius: 4px;
+	height: 40px;
+	padding: 15px;
+}
+.task-add{
+	text-align: center;
+	padding: 20px;
+}
+.window{
+	padding: 40px;
+}

@@ -1,13 +1,13 @@
-%p#notice= notice
-%p
-  %strong Title:
-  = @list.title
-%p
-  %strong Description:
-  = @list.description
-  
-= render @list.items
-= render 'items/form'
-
-= link_to 'Edit', edit_list_path(@list)
-= link_to 'Back', lists_path
+.window
+	.col-md-12.col-xs-12
+		.panel.panel-default
+			.panel-heading
+				= link_to ' ', edit_list_path(@list), class: 'fa fa-pencil'
+				%h2.title= @list.title
+				.title= @list.description
+			.panel-body
+				.task
+					.fa.fa-tasks
+						= render @list.items
+		.task-add
+			= render 'items/form'
