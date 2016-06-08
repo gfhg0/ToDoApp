@@ -1,13 +1,27 @@
-.window
-	.col-md-12.col-xs-12
+.container
+	.col-md-12
 		.panel.panel-default
 			.panel-heading
 				= link_to ' ', edit_list_path(@list), class: 'fa fa-pencil'
 				%h2.title= @list.title
 				.title= @list.description
 			.panel-body
-				.task
-					.fa.fa-tasks
-						= render @list.items
+				.item
+					= render @list.items
 		.task-add
 			= render 'items/form'
+
+
+
+
+/ .window
+/ 	.col-md-12.col-xs-12
+/ 		.panel.panel-default
+/ 			.panel-heading
+/ 				= link_to ' ', edit_list_path(@list), class: 'fa fa-pencil'
+/ 				%h2.title= @list.title
+/ 				.title= @list.description
+/ 			.panel-body
+/ 				= render @list.items
+/ 		.task-add
+/ 			= render 'items/form'

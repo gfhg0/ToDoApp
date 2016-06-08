@@ -1,2 +1,5 @@
-= item.content
-= link_to ' ', list_item_path(@list, item.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash'
+.task
+	.item-text
+		= item.content
+	.icon-trash
+		= link_to ' ', list_item_path(@list, item.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-times'

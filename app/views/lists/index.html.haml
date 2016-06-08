@@ -3,7 +3,8 @@
     .panel.panel-default
       .panel-heading
         = link_to list.title, list, class: 'link title'
-        = link_to ' ', list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash'
+        = link_to ' ', list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-times'
         = link_to ' ', edit_list_path(list), class: 'fa fa-pencil'
       .panel-body
         = list.description
+.col-md-12.pagination-align= will_paginate @musics, renderer: BootstrapPagination::Rails, inner_window: 1, outer_window: 0

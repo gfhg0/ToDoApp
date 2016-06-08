@@ -3,7 +3,7 @@ class ListsController < ApplicationController
 
   def index
     if user_signed_in?
-      @lists = current_user.lists
+      @lists = current_user.lists.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
      else 
       redirect_to new_user_session_path
     end

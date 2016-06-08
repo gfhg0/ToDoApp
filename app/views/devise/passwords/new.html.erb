@@ -5,12 +5,10 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: 'task-field' %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Send", :class => 'add-button' %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
