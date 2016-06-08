@@ -10,12 +10,10 @@
   .field
     = f.label "title"
     %br
-      = f.text_field :title
+      = f.text_field :title, class: 'task-field'
   .field
     = f.label :description
     %br
-      = f.text_area :description
+      = f.text_area :description, class: 'task-field'
   .actions
-    = f.submit
-
-
+    = f.submit 'Create', :class => 'add-button'
